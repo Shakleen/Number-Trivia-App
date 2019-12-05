@@ -27,7 +27,7 @@ void main() {
         (_) async => Right(tNumberTrivia),
       );
 
-      final result = await usecase(number: tNumber);
+      final result = await usecase(Params(number: tNumber));
       expect(result, Right(tNumberTrivia));
       verify(mockNumberTriviaRepository.getConcreteNumberTrivia(tNumber));
       verifyNoMoreInteractions(mockNumberTriviaRepository);
