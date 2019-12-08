@@ -49,4 +49,14 @@ void main() {
       },
     );
   });
+
+  group('cacheNumberTrivia', () {
+    final tNumberTriviaModel = NumberTriviaModel(number: 1, text: 'test trivia');
+
+    test('should call sharedPreferences to cache data', () {
+      source.cacheNumberTrivia(tNumberTriviaModel);
+      final expectedJsonString = json.encode(tNumberTriviaModel.toJson());
+      verify(mockSharedPreference.setString(CACHED_NUMBER_TRIVIA, expectedJsonString));
+    });
+  });
 }
