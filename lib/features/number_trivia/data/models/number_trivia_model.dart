@@ -17,4 +17,7 @@ class NumberTriviaModel extends NumberTrivia {
   Map<String, dynamic> toJson() {
     return {'text': text, 'number': number};
   }
+
+  @override
+  List<Object> get props => [number, text];
 }

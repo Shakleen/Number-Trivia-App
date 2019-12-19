@@ -45,7 +45,7 @@ void main() {
       () async {
         when(mockSharedPreference.getString(any)).thenReturn(null);
         final call = source.getLastNumberTrivia;
-        expect(() => call(), throwsA(TypeMatcher<CacheException>()));
+        expect(() => call(), throwsA(CacheException()));
       },
     );
   });
