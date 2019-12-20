@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 abstract class NumberTriviaEvent extends Equatable {
-  const NumberTriviaEvent();
+  NumberTriviaEvent();
 }
 
 class GetTriviaForConcreteNumber extends NumberTriviaEvent {

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:number_trivia/features/number_trivia/domain/entities/number_trivia.dart';
 
 abstract class NumberTriviaState extends Equatable {
-  const NumberTriviaState();
+  NumberTriviaState();
 }
 
 class Empty extends NumberTriviaState {
